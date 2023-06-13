@@ -26,7 +26,7 @@
     "@vercel/edge": "^0.1.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "next": "^13.2.4-canary.6",
+    "next": "^13.4.5",
     "payload": "^1.8.5",
     "payload-admin-bar": "^1.0.5",
     "pino-pretty": "^9.1.1",
@@ -45,7 +45,7 @@
     "cross-env": "^7.0.3",
     "dotenv-cli": "^6.0.0",
     "eslint": "8.31.0",
-    "eslint-config-next": "13.1.1",
+    "eslint-config-next": "13.4.5",
     "nodemon": "^2.0.6",
     "ts-node": "^9.1.1",
     "typescript": "5.1.3"
