@@ -1,0 +1,22 @@
+{
+  "baseBranch": "origin/main",
+  "pipeline": {
+    "dev": {
+      "dependsOn": ["^build"],
+      "persistent": true,
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "dist/**"],
+      "cache": false
+    },
+    "clean": {},
+    "lint": {},
+    "lint:fix": {},
+    "generate:types": {},
+    "generate:graphQLSchema": {},
+    "start": {},
+    "type-check": {}
+  }
+}
