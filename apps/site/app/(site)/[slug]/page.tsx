@@ -4,6 +4,8 @@ import { getPayloadClient } from '../../../payload/payloadClient';
 import Blocks from '../../../components/Blocks';
 import { Hero } from '../../../components/Hero';
 import { AdminBar } from '../../../components/AdminBar';
+import { Gutter } from '../../../components/Gutter';
+import { getFoo } from '@next-payload-demo/foo'
 
 const Page = async ({ params: { slug } }: { params: { slug: string } }) => {
   const payload = await getPayloadClient();
@@ -26,6 +28,9 @@ const Page = async ({ params: { slug } }: { params: { slug: string } }) => {
       <AdminBar adminBarProps={{ collection: 'pages', id: page.id }} />
       <Hero {...page.hero} />
       <Blocks blocks={page.layout} />
+      <Gutter>
+        {getFoo()}
+      </Gutter>
     </React.Fragment>
   )
 }

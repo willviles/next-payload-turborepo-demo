@@ -4,6 +4,9 @@ const path = require("path");
 /** @type {import('next').NextConfig} */
 const nextConfig = withPayload(
   {
+    transpilePackages: [
+      '@next-payload-demo/foo'
+    ],
     eslint: {
       ignoreDuringBuilds: true,
     },

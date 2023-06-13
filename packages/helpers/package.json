@@ -1,0 +1,17 @@
+{
+  "name": "@next-payload-demo/foo",
+  "version": "0.1.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -Rf .turbo node_modules dist .tsbuildinfo",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit",
+    "with-env": "dotenv -e ../../.env --"
+  },
+  "devDependencies": {
+    "typescript": "5.1.3"
+  }
+}
