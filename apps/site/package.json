@@ -4,14 +4,15 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "next dev",
-    "start": "next start",
+    "dev": "pnpm with-env next dev",
+    "start": "pnpm with-env next start",
     "lint": "next lint",
     "install:payload": "next-payload install",
     "build:next": "next build",
-    "build": "yarn build:next",
+    "build": "pnpm with-env build:next",
     "generate:types": "cross-env PAYLOAD_CONFIG_PATH=payload/payload.config.ts payload generate:types",
-    "generate:graphQLSchema": "PAYLOAD_CONFIG_PATH=payload/payload.config.ts payload generate:graphQLSchema"
+    "generate:graphQLSchema": "PAYLOAD_CONFIG_PATH=payload/payload.config.ts payload generate:graphQLSchema",
+    "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.245.0",
@@ -42,6 +43,7 @@
     "@types/react": "^18.0.28",
     "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
+    "dotenv-cli": "^6.0.0",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "nodemon": "^2.0.6",

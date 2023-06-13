@@ -5,11 +5,10 @@
   "types": "./index.ts",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -Rf .turbo node_modules dist .tsbuildinfo",
+    "clean": "rm -Rf .turbo node_modules",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "type-check": "tsc --noEmit",
-    "with-env": "dotenv -e ../../.env --"
+    "type-check": "tsc --noEmit"
   },
   "devDependencies": {
     "typescript": "5.1.3"
