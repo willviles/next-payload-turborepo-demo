@@ -43,7 +43,7 @@ export async function generateStaticParams() {
     limit: 0,
   })
 
-  return pages.docs.map(({ slug }: { slug: string }) => ({ slug }))
+  return pages.docs.map(({ slug }) => ({ slug }))
 }
 
 export default Page;
