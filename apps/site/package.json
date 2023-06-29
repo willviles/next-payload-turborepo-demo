@@ -8,8 +8,7 @@
     "start": "pnpm with-env next start",
     "lint": "next lint",
     "install:payload": "next-payload install",
-    "build:next": "next build",
-    "build": "pnpm with-env build:next",
+    "build": "pnpm with-env next build",
     "generate:types": "cross-env PAYLOAD_CONFIG_PATH=payload/payload.config.ts payload generate:types",
     "generate:graphQLSchema": "PAYLOAD_CONFIG_PATH=payload/payload.config.ts payload generate:graphQLSchema",
     "with-env": "dotenv -e ../../.env --"
