@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { PayloadMeUser, PayloadAdminBarProps, PayloadAdminBar } from 'payload-admin-bar';
 import { Gutter } from '../Gutter';
 import classes from './index.module.scss'
+import { getBaseUrl } from '../../utilities/base-url';
 
 const Title: React.FC = () => (
   <span>
@@ -30,7 +31,7 @@ export const AdminBar: React.FC<{
       <Gutter className={classes.blockContainer} >
         <PayloadAdminBar
           {...adminBarProps}
-          cmsURL={process.env.NEXT_PUBLIC_APP_URL}
+          cmsURL={getBaseUrl()}
           onAuthChange={setUser}
           className={classes.payloadAdminBar}
           classNames={{

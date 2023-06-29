@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
+import { getBaseUrl } from '../../utilities/base-url';
 
 const regenerate = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.query.secret !== process.env.NEXT_PRIVATE_REGENERATION_SECRET) {
@@ -8,7 +9,7 @@ const regenerate = async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (typeof req.query.path === 'string') {
     try {
-      const url = new URL(req.query.path, process.env.NEXT_PUBLIC_APP_URL);
+      const url = new URL(req.query.path, getBaseUrl());
       const { pathname: pathToRegenerate } = url;
       await res.revalidate(pathToRegenerate);
       return res.json({ regenerated: true });
